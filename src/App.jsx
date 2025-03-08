@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import LoadingScreen from './LoadingScreen'; // Adjust the path if needed
+import LoadingScreen from './LoadingScreen';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
