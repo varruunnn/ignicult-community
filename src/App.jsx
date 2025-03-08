@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import LoadingScreen from './LoadingScreen'; // Adjust the path if needed
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
+
   const handleLoad = () => {
     setIsLoading(false);
   };
+
   return (
     <div>
-      {isLoading&& <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100vh', display: 'flex', justifyContent: 'center', color: 'white', alignItems: 'center', backgroundColor: 'black', backdropFilter: 'blur(10px)', zIndex: 1000 }}>Loading...</div>}
+      {isLoading && <LoadingScreen loading={isLoading} />}
       <iframe
         src="https://sesamelabs.xyz/ignicult/?tab=home"
         title="Ignicult Community"
@@ -16,7 +19,7 @@ const App = () => {
         onLoad={handleLoad}
       ></iframe>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
