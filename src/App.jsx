@@ -4,9 +4,12 @@ import LoadingScreen from './LoadingScreen';
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
+  
   const handleLoad = () => {
     setIsLoading(false);
   };
+
+  
 
   return (
     <div>
