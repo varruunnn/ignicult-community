@@ -1,0 +1,10 @@
+html, body {
+    overflow: hidden;
+}
+html, body ,iframe{
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 100%;
+    width: 100%;
+}
